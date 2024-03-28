@@ -55,15 +55,15 @@
   ],
   "bottoms": [
     {
-      "name": "Death Star",
+      "name": "Star Destroyer",
       "price": 25
     },
     {
-      "name": "Star Destroyer",
+      "name": "Death Star",
       "price": 50
     },
     {
-      "name": "SuperSize me á Baby Yoda",
+      "name": "SuperSize me á Jabba the Hut",
       "price": 75
     }
   ]

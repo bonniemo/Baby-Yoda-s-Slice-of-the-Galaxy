@@ -66,48 +66,50 @@ const CreatePizza = () => {
 
   return (
     <>
-      <h1>Create a pizza</h1>
-      <section>
-        <h2>Choose size</h2>
-        {menu.bottoms.map((bottom) => (
-          <React.Fragment key={bottom.name}>
-            <label htmlFor={bottom.name}>
-              {bottom.name}, {bottom.price} kr
-            </label>
-            <input
-              type="radio"
-              name={"bottom"}
-              id={bottom.name}
-              onChange={() =>
-                setChosenBottom({ name: bottom.name, price: bottom.price })
-              }
-            />
-          </React.Fragment>
-        ))}
-      </section>
-      <section>
-        <h2>Choose Toppings</h2>
-        {menu.toppings.map((topping) => (
-          <React.Fragment key={topping.name}>
-            <label htmlFor={topping.name}>
-              {topping.name}, {topping.price} kr
-            </label>
-            <input
-              type="checkbox"
-              name={topping.name}
-              id={topping.name}
-              onChange={(e) =>
-                handleToppingChange(
-                  topping.name,
-                  e.target.checked,
-                  topping.price
-                )
-              }
-            />
-          </React.Fragment>
-        ))}
-        <button onClick={handleOrder}>Beställ</button>
-      </section>
+      <article className="createPizza">
+        <h1>Summon your Ingredients</h1>
+        <section className="choose">
+          <h3>Size</h3>          
+          {menu.bottoms.map((bottom) => (
+            <section className="choose__radio" key={bottom.name}>
+              <input
+                type="radio"
+                name={"bottom"}
+                id={bottom.name}
+                onChange={() =>
+                  setChosenBottom({ name: bottom.name, price: bottom.price })
+                }
+              />
+              <label htmlFor={bottom.name}>
+                {bottom.name}, {bottom.price} kr
+              </label>
+            </section>
+          ))}
+        </section>
+        <section className="choose">
+          <h2>Choose Toppings</h2>
+          {menu.toppings.map((topping) => (
+            <section key={topping.name}>
+              <input
+                type="checkbox"
+                name={topping.name}
+                id={topping.name}
+                onChange={(e) =>
+                  handleToppingChange(
+                    topping.name,
+                    e.target.checked,
+                    topping.price
+                  )
+                }
+              />
+              <label htmlFor={topping.name}>
+                {topping.name}, {topping.price} kr
+              </label>
+            </section>
+          ))}
+          <button onClick={handleOrder}>Beställ</button>
+        </section>
+      </article>
     </>
   );
 };

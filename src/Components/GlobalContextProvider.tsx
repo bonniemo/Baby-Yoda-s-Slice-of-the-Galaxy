@@ -104,7 +104,6 @@ const reducer = (state: PizzaState, action: Action) => {
   }
 };
 
-
 const GlobalContextProvider = ({ children }: PizzaContextProp) => {
   const [state, dispatch] = useReducer(reducer, InitialPizzaState);
 
@@ -114,5 +113,4 @@ const GlobalContextProvider = ({ children }: PizzaContextProp) => {
     </GlobalContext.Provider>
   );
 };
-
 export default GlobalContextProvider;
