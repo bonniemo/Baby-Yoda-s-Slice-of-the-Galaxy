@@ -1,0 +1,70 @@
+{
+  "toppings": [
+    {
+      "name": "Galactic Pepperoni",
+      "price": 12
+    },
+    {
+      "name": "Jedi Jalapenos",
+      "price": 10
+    },
+    {
+      "name": "Sith Sausage",
+      "price": 11
+    },
+    {
+      "name": "Wookiee Hair",
+      "price": 15
+    },
+    {
+      "name": "Ewok Mushrooms",
+      "price": 15
+    },
+    {
+      "name": "Lightsaber Slices",
+      "price": 10
+    },
+    {
+      "name": "Tatooine Tomatoes",
+      "price": 10
+    },
+    {
+      "name": "Hoth Ham",
+      "price": 10
+    },
+    {
+      "name": "Dagobah Olives",
+      "price": 10
+    },
+    {
+      "name": "Coruscant Capsicum",
+      "price": 10
+    },
+    {
+      "name": "Naboo Basil",
+      "price": 10
+    },
+    {
+      "name": "Bespin Broccoli",
+      "price": 10
+    },
+    {
+      "name": "Endor Extra Cheese",
+      "price": 10
+    }
+  ],
+  "bottoms": [
+    {
+      "name": "Death Star",
+      "price": 25
+    },
+    {
+      "name": "Star Destroyer",
+      "price": 50
+    },
+    {
+      "name": "SuperSize me á Baby Yoda",
+      "price": 75
+    }
+  ]
+}
