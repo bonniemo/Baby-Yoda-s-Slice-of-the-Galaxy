@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import {
   GlobalContext,
   HandleToppingChange,
@@ -6,6 +6,7 @@ import {
 } from "./Components/GlobalContextProvider";
 import menu from "./Components/Menu.json";
 import uuid from "react-uuid";
+import jabba from "./Images/jabba.png";
 
 const CreatePizza = () => {
   const { dispatch } = useContext(GlobalContext);
@@ -66,48 +67,53 @@ const CreatePizza = () => {
 
   return (
     <>
-      <article className="createPizza">
-        <h1>Summon your Ingredients</h1>
-        <section className="choose">
-          <h3>Size</h3>          
-          {menu.bottoms.map((bottom) => (
-            <section className="choose__radio" key={bottom.name}>
-              <input
-                type="radio"
-                name={"bottom"}
-                id={bottom.name}
-                onChange={() =>
-                  setChosenBottom({ name: bottom.name, price: bottom.price })
-                }
-              />
-              <label htmlFor={bottom.name}>
-                {bottom.name}, {bottom.price} kr
-              </label>
-            </section>
-          ))}
+      <article className="create-pizza">
+        <section className="create-pizza__img">
+          <img src={jabba} alt="" />
         </section>
-        <section className="choose">
-          <h2>Choose Toppings</h2>
-          {menu.toppings.map((topping) => (
-            <section key={topping.name}>
-              <input
-                type="checkbox"
-                name={topping.name}
-                id={topping.name}
-                onChange={(e) =>
-                  handleToppingChange(
-                    topping.name,
-                    e.target.checked,
-                    topping.price
-                  )
-                }
-              />
-              <label htmlFor={topping.name}>
-                {topping.name}, {topping.price} kr
-              </label>
-            </section>
-          ))}
-          <button onClick={handleOrder}>Beställ</button>
+        <section className="ingredients-card">
+          <h1>Summon your Ingredients</h1>
+          <section className="choose">
+            <h3>Size</h3>
+            {menu.bottoms.map((bottom) => (
+              <section className="choose__radio" key={bottom.name}>
+                <input
+                  type="radio"
+                  name={"bottom"}
+                  id={bottom.name}
+                  onChange={() =>
+                    setChosenBottom({ name: bottom.name, price: bottom.price })
+                  }
+                />
+                <label htmlFor={bottom.name}>
+                  {bottom.name}, {bottom.price} kr
+                </label>
+              </section>
+            ))}
+          </section>
+          <h3>Toppings</h3>
+          <section className="choose__topping">
+            {menu.toppings.map((topping) => (
+              <section key={topping.name}>
+                <input
+                  type="checkbox"
+                  name={topping.name}
+                  id={topping.name}
+                  onChange={(e) =>
+                    handleToppingChange(
+                      topping.name,
+                      e.target.checked,
+                      topping.price
+                    )
+                  }
+                />
+                <label htmlFor={topping.name}>
+                  {topping.name}, {topping.price} kr
+                </label>
+              </section>
+            ))}
+            <button onClick={handleOrder}>Beställ</button>
+          </section>
         </section>
       </article>
     </>

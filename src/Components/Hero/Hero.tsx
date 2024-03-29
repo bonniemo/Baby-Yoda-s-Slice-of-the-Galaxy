@@ -1,5 +1,7 @@
 import "./Hero.scss";
 import yoda from "../../Images/pizzayoda.png";
+import { TbPizzaOff } from "react-icons/tb";
+import { LuShoppingCart } from "react-icons/lu";
 
 const Hero = () => {
   return (
@@ -43,6 +45,13 @@ const Hero = () => {
             <li>
               <a href="#">Summon Pizza Support</a>
             </li>
+            <section>
+                
+            </section>
+            <li className="cart-icon"><a href="#">
+                <TbPizzaOff className="cart-icon__pizza"/>
+                <LuShoppingCart />
+                </a></li>
           </ul>
         </nav>
       </article>      

@@ -1,7 +1,7 @@
-import React from "react";
 import { GlobalContext } from "./GlobalContextProvider";
 import { useContext } from "react";
 import menu from "./Menu.json";
+import "./Cart.scss";
 
 const Cart = () => {
   const { state, dispatch } = useContext(GlobalContext);
@@ -37,7 +37,11 @@ const Cart = () => {
     });
   };
 
-  const handleToppingRemove = (id: string, toppingName: string, toppingPrice: number) => {
+  const handleToppingRemove = (
+    id: string,
+    toppingName: string,
+    toppingPrice: number
+  ) => {
     dispatch({
       type: "REMOVE_TOPPING",
       payload: { id, toppingName, toppingPrice },
@@ -46,21 +50,24 @@ const Cart = () => {
   return (
     <>
       <section className="cart">
-        <h1>Cart</h1>
-        <h2>Your Pizza</h2>
+        <h1>Cart</h1>        
         {state.pizzas.length === 0 ? (
           <p>No pizza yet</p>
         ) : (
           <>
             {state.pizzas.map((item, index) => (
-              <React.Fragment key={index}>
+              <section className="pizza-card" key={index}>
+                <h2>Pizza {(index + 1)}:</h2>
                 <section className="cart__bottom">
                   <button
                     onClick={() => handleSizeChange(item.id, item.bottom, true)}
                   >
                     -
                   </button>
-                  <strong>Botten:</strong> {item.bottom}
+                  <p>
+                    {" "}
+                    <strong>Botten:</strong> {item.bottom}
+                  </p>
                   <button
                     onClick={() =>
                       handleSizeChange(item.id, item.bottom, false)
@@ -70,25 +77,33 @@ const Cart = () => {
                   </button>
                 </section>
                 <ul>
-                  <p>
+                  <h3>
                     <strong>Topping:</strong>
-                  </p>
+                  </h3>
                   {item.toppings.map((topping, toppingIndex) => (
                     <li key={toppingIndex}>
                       {topping.name} - {topping.price} kr
-                      <button onClick={() => handleToppingRemove(item.id, topping.name, topping.price)}>
+                      <button className="btn-remove"
+                        onClick={() =>
+                          handleToppingRemove(
+                            item.id,
+                            topping.name,
+                            topping.price
+                          )
+                        }
+                      >
                         -
                       </button>
                     </li>
                   ))}
                 </ul>
-                <p>
+                <p className="pizza-card__price">
                   <strong>Price:</strong> {item.totalPrice} kr
                 </p>
                 <button onClick={() => handleRemove(item.id)}>
                   Remove Pizza
                 </button>
-              </React.Fragment>
+              </section>
             ))}
           </>
         )}

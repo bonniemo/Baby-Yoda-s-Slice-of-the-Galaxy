@@ -3,9 +3,22 @@ body {
   
 }
 
-.createPizza {
-  padding: 2rem;
+.create-pizza {  
+  height: 100vh;
   line-height: 1.2;
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+
+  .create-pizza__img {
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+  }
+
+  .ingredients-card {
+    padding: 2rem 0;
+  }
     
 
     h1, h2 {
@@ -13,30 +26,34 @@ body {
     }
 
     h3 {
-      margin: .5rem 0;
-    }
-
-    .choose {
-      margin-bottom: 3rem;
-    }
+      margin: 1rem 0 .5rem;
+      text-decoration: underline;      
+    }   
 
     .choose__radio{
       margin-bottom: .5rem;
     }
 
+    .choose__topping {
+      columns: 2;
+      width: fit-content;      
+      
+    }
+    
     label {
       font-size: 1.2rem;
-      margin-right: 1rem;
+      margin-right: 2rem;
       line-height: 2;
     }
-
+    
     input {
       margin-right: .5rem;
       font-size: larger;
     }
-
-    button {
-      margin: 1rem 0;
-      padding: 0.5rem 1rem;
+    
+    button {      
+      padding: 0.2rem 2rem;
+      margin-top: .5rem;
+      width: 60%;      
     }
-}
+  }
