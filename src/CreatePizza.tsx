@@ -7,8 +7,9 @@ import {
 import menu from "./Components/Menu.json";
 import uuid from "react-uuid";
 import jabba from "./Images/jabba.png";
+import Cart from "./Components/Cart";
 
-const CreatePizza = () => {
+const CreatePizza = ({ cartVisible }) => {
   const { dispatch } = useContext(GlobalContext);
 
   const [chosenBottom, setChosenBottom] = useState<{
@@ -112,9 +113,10 @@ const CreatePizza = () => {
                 </label>
               </section>
             ))}
-            <button onClick={handleOrder}>Beställ</button>
+            <button onClick={handleOrder}>Buy</button>
           </section>
         </section>
+        {cartVisible && <Cart />}
       </article>
     </>
   );

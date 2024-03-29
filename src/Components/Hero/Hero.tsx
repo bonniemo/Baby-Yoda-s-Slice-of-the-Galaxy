@@ -3,7 +3,12 @@ import yoda from "../../Images/pizzayoda.png";
 import { TbPizzaOff } from "react-icons/tb";
 import { LuShoppingCart } from "react-icons/lu";
 
-const Hero = () => {
+const Hero = ({ setCartVisible, cartVisible }) => {
+    const toggleCartVisibility = (e) => {
+        e.preventDefault();
+        setCartVisible(!cartVisible)
+    }
+
   return (
     <>
       <article className="hero">
@@ -48,7 +53,8 @@ const Hero = () => {
             <section>
                 
             </section>
-            <li className="cart-icon"><a href="#">
+            <li className="cart-icon"><a href="#"
+            onClick={toggleCartVisibility}>                
                 <TbPizzaOff className="cart-icon__pizza"/>
                 <LuShoppingCart />
                 </a></li>

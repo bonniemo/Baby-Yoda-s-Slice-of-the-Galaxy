@@ -18,22 +18,20 @@ body {
 
   .ingredients-card {
     padding: 2rem 0;
-  }
-    
 
     h1, h2 {
       margin: .8rem 0;
     }
-
+  
     h3 {
       margin: 1rem 0 .5rem;
       text-decoration: underline;      
     }   
-
+  
     .choose__radio{
       margin-bottom: .5rem;
     }
-
+  
     .choose__topping {
       columns: 2;
       width: fit-content;      
@@ -56,4 +54,6 @@ body {
       margin-top: .5rem;
       width: 60%;      
     }
+  }    
+
   }

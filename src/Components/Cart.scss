@@ -1,17 +1,21 @@
 .cart {
-  padding: 1rem;
-  width: 50%;
+  min-width: 20rem;
+  padding: 0 1.5rem 1rem .2rem;  
   background-color: rgb(28, 28, 28);  
   border-radius: 0.8rem;
   line-height: 1.2;
   font-size: 1rem;
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
+  text-align: end;
   gap: 1rem;
+  height: max-content;
 
   .cart__bottom {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     gap: 0.5rem;
     margin: 0 0 2rem;
   }
