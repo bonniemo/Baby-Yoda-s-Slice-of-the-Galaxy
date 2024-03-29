@@ -6,11 +6,12 @@ import CreatePizza from "./CreatePizza";
 
 const App = () => {
   const [cartVisible, setCartVisible] = useState(false);
+
   return (
     <>
-      <Hero setCartVisible={setCartVisible} cartVisible={cartVisible} />
       <GlobalContextProvider>
-        <CreatePizza cartVisible={cartVisible}/>      
+        <Hero setCartVisible={setCartVisible} cartVisible={cartVisible}/>
+        <CreatePizza cartVisible={cartVisible}/>
       </GlobalContextProvider>
     </>
   );

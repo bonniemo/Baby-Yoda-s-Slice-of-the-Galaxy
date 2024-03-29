@@ -1,13 +1,18 @@
 import "./Hero.scss";
 import yoda from "../../Images/pizzayoda.png";
 import { TbPizzaOff } from "react-icons/tb";
+import { TbPizza } from "react-icons/tb";
 import { LuShoppingCart } from "react-icons/lu";
+import { useContext } from "react";
+import { GlobalContext } from "../GlobalContextProvider";
 
 const Hero = ({ setCartVisible, cartVisible }) => {
-    const toggleCartVisibility = (e) => {
-        e.preventDefault();
-        setCartVisible(!cartVisible)
-    }
+  const { state } = useContext(GlobalContext);
+
+  const toggleCartVisibility = (e) => {
+    e.preventDefault();
+    setCartVisible(!cartVisible);
+  };
 
   return (
     <>
@@ -20,10 +25,7 @@ const Hero = ({ setCartVisible, cartVisible }) => {
           </h1>
           <h2>
             As Master Yoda once said,
-            <span>
-              "'Deliver. Or deliver not. There is no
-              delay."
-            </span>
+            <span>"'Deliver. Or deliver not. There is no delay."</span>
           </h2>
           <p>
             Experience the warp-speed delivery of our out-of-this-world pizzas,
@@ -50,17 +52,25 @@ const Hero = ({ setCartVisible, cartVisible }) => {
             <li>
               <a href="#">Summon Pizza Support</a>
             </li>
-            <section>
-                
-            </section>
-            <li className="cart-icon"><a href="#"
-            onClick={toggleCartVisibility}>                
-                <TbPizzaOff className="cart-icon__pizza"/>
-                <LuShoppingCart />
-                </a></li>
+            <section></section>
+            {state.pizzas.length === 0 ? (
+              <li className="cart-icon">
+                <a href="#" onClick={toggleCartVisibility}>
+                  <TbPizzaOff className="cart-icon__pizza" />
+                  <LuShoppingCart />
+                </a>
+              </li>
+            ) : (
+              <li className="cart-icon">
+                <a href="#" onClick={toggleCartVisibility}>
+                  <TbPizza className="cart-icon__pizza" />
+                  <LuShoppingCart />
+                </a>
+              </li>
+            )}
           </ul>
         </nav>
-      </article>      
+      </article>
     </>
   );
 };
