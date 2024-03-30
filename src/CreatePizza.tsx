@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import {
+  CartVisibleType,
   GlobalContext,
   HandleToppingChange,
   Topping,
@@ -9,7 +10,7 @@ import uuid from "react-uuid";
 import jabba from "./Images/jabba.png";
 import Cart from "./Components/Cart";
 
-const CreatePizza = ({ cartVisible }) => {
+const CreatePizza = ({ cartVisible }: CartVisibleType) => {
   const { dispatch } = useContext(GlobalContext);
 
   const [chosenBottom, setChosenBottom] = useState<{
@@ -68,7 +69,7 @@ const CreatePizza = ({ cartVisible }) => {
 
   return (
     <>
-      <article className="create-pizza">
+      <article className="create-pizza" id="test">
         <section className="create-pizza__img">
           <img src={jabba} alt="" />
         </section>

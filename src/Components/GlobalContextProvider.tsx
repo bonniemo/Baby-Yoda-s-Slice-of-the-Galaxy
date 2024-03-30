@@ -5,6 +5,14 @@ type PizzaContextProp = {
   children: React.ReactNode;
 };
 
+export type CartVisibleType = {
+  cartVisible: boolean;
+} 
+
+export type SetCartVisibleTypes = CartVisibleType & {
+  setCartVisible: (value:boolean) => void
+}
+
 export type HandleToppingChange = (
   toppingName: string,
   isChecked: boolean,

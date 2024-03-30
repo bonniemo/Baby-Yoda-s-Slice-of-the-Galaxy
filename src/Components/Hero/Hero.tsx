@@ -4,12 +4,12 @@ import { TbPizzaOff } from "react-icons/tb";
 import { TbPizza } from "react-icons/tb";
 import { LuShoppingCart } from "react-icons/lu";
 import { useContext } from "react";
-import { GlobalContext } from "../GlobalContextProvider";
+import { GlobalContext, SetCartVisibleTypes } from "../GlobalContextProvider";
 
-const Hero = ({ setCartVisible, cartVisible }) => {
+const Hero: React.FC<SetCartVisibleTypes> = ({ setCartVisible, cartVisible }) => {
   const { state } = useContext(GlobalContext);
 
-  const toggleCartVisibility = (e) => {
+  const toggleCartVisibility = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     setCartVisible(!cartVisible);
   };
@@ -44,7 +44,7 @@ const Hero = ({ setCartVisible, cartVisible }) => {
               <a href="#"></a>
             </li>
             <li>
-              <a href="#">Deploy the Pizza Droids</a>
+              <a href="#test">Deploy the Pizza Droids</a>
             </li>
             <li>
               <a href="#">Locate our Galactic Outpost</a>
