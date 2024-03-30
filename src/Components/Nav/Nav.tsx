@@ -19,7 +19,7 @@ const Nav: React.FC<SetCartVisibleTypes> = ({ setCartVisible, cartVisible }) => 
         <a href="#order">Deploy the Pizza Droids</a>
       </li>
       <li>
-        <a href="#">Locate our Galactic Outpost</a>
+        <a href="#location">Locate our Galactic Outpost</a>
       </li>
       <li>
         <a href="#">Summon Pizza Support</a>
