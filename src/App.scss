@@ -1,17 +1,16 @@
 body {
   background-color: rgb(66, 65, 65);
-  
 }
 
 .create-pizza {  
-  height: 100vh;
+  height: 85vh;
   line-height: 1.2;
   display: flex;
-  gap: 2rem;
-  margin-bottom: 2rem;
+  gap: 2rem; 
+  overflow: scroll;
 
   .create-pizza__img {
-    width: 50vw;
+    width: 50vw;    
     display: flex;
     justify-content: center;
   }

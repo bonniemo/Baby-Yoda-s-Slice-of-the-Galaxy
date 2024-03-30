@@ -2,7 +2,8 @@ import { useState } from "react";
 import "./App.scss";
 import GlobalContextProvider from "./Components/GlobalContextProvider";
 import Hero from "./Components/Hero/Hero";
-import CreatePizza from "./CreatePizza";
+import CreatePizza from "./Components/CreatePizza";
+import Nav from "./Components/Nav/Nav";
 
 const App = () => {
   const [cartVisible, setCartVisible] = useState(false);
@@ -10,8 +11,9 @@ const App = () => {
   return (
     <>
       <GlobalContextProvider>
-        <Hero setCartVisible={setCartVisible} cartVisible={cartVisible}/>
-        <CreatePizza cartVisible={cartVisible}/>
+        <Hero />
+        <Nav setCartVisible={setCartVisible} cartVisible={cartVisible} />
+        <CreatePizza cartVisible={cartVisible} />
       </GlobalContextProvider>
     </>
   );

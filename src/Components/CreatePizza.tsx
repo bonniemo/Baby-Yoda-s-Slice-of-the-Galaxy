@@ -4,11 +4,11 @@ import {
   GlobalContext,
   HandleToppingChange,
   Topping,
-} from "./Components/GlobalContextProvider";
-import menu from "./Components/Menu.json";
+} from "./GlobalContextProvider";
+import menu from "./Menu.json";
 import uuid from "react-uuid";
-import jabba from "./Images/jabba.png";
-import Cart from "./Components/Cart";
+import jabba from "../Images/jabba.png";
+import Cart from "./Cart";
 
 const CreatePizza = ({ cartVisible }: CartVisibleType) => {
   const { dispatch } = useContext(GlobalContext);
@@ -69,7 +69,7 @@ const CreatePizza = ({ cartVisible }: CartVisibleType) => {
 
   return (
     <>
-      <article className="create-pizza" id="test">
+      <article className="create-pizza" id="order">
         <section className="create-pizza__img">
           <img src={jabba} alt="" />
         </section>
