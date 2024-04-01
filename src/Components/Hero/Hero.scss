@@ -25,19 +25,17 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    position: relative;
-    //like this for bigger screen
-    // top: -4rem;
-    padding: 2rem;
-    gap: 1.5rem;
+    padding-right: 1rem;
+    gap: .5rem;
 
     h1 {
-      font-size: 2rem;
+      font-size: 3rem;
       margin-bottom: 0.5rem;
     }
 
     h2 {
       font-size: 1.2rem;
+      font-weight: 400;
     }
 
     p {
