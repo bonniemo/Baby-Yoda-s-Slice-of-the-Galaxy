@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
 import { LuShoppingCart } from 'react-icons/lu'
 import { TbPizzaOff, TbPizza } from 'react-icons/tb'
-import { GlobalContext } from '../GlobalContextProvider'
 import './Nav.scss'
 import { SetCartVisibleTypes } from '../../Types/Types'
+import { GlobalContext } from '../../State/GlobalStateContext'
 
 const Nav: React.FC<SetCartVisibleTypes> = ({ setCartVisible, cartVisible }) => {
     const { state } = useContext(GlobalContext);
@@ -46,4 +46,4 @@ const Nav: React.FC<SetCartVisibleTypes> = ({ setCartVisible, cartVisible }) => 
   )
 }
 
-export default Nav
+export default Nav;

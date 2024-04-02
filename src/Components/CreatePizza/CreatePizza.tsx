@@ -1,11 +1,16 @@
 import { useContext, useState } from "react";
-import { GlobalContext } from "../GlobalContextProvider";
+
 import menu from "../../Data/Menu.json";
 import uuid from "react-uuid";
 import jabba from "../../Images/jabba.png";
 import Cart from "../Cart/Cart";
 import "./CreatePizza.scss";
-import { CartVisibleType, Topping, HandleToppingChange } from "../../Types/Types";
+import {
+  CartVisibleType,
+  Topping,
+  HandleToppingChange,
+} from "../../Types/Types";
+import { GlobalContext } from "../../State/GlobalStateContext";
 
 const CreatePizza = ({ cartVisible }: CartVisibleType) => {
   const { dispatch } = useContext(GlobalContext);

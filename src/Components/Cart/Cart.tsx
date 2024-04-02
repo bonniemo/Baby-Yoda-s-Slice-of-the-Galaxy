@@ -1,7 +1,7 @@
-import { GlobalContext } from "../GlobalContextProvider";
 import { useContext } from "react";
 import menu from "../../Data/Menu.json";
 import "./Cart.scss";
+import { GlobalContext } from "../../State/GlobalStateContext";
 
 const Cart = () => {
   const { state, dispatch } = useContext(GlobalContext);

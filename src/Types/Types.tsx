@@ -31,3 +31,12 @@ export type Pizza = {
 export type PizzaState = {
   pizzas: Pizza[];
 };
+
+export type Action =
+  | { type: "ADD"; payload: Pizza }
+  | { type: "REMOVE"; payload: string }
+  | { type: "UPDATE_SIZE"; payload: { id: string; newSize: string } }
+  | {
+      type: "REMOVE_TOPPING";
+      payload: { id: string; toppingName: string; toppingPrice: number };
+    };
