@@ -1,39 +1,6 @@
 import React, { createContext, useReducer } from "react";
-import menu from "./Menu.json";
-
-type PizzaContextProp = {
-  children: React.ReactNode;
-};
-
-export type CartVisibleType = {
-  cartVisible: boolean;
-} 
-
-export type SetCartVisibleTypes = CartVisibleType & {
-  setCartVisible: (value:boolean) => void
-}
-
-export type HandleToppingChange = (
-  toppingName: string,
-  isChecked: boolean,
-  toppingPrice: number
-) => void;
-
-export type Topping = {
-  name: string;
-  price: number;
-};
-
-export type Pizza = {
-  id: string;
-  toppings: Topping[];
-  bottom: string;
-  totalPrice: number;  
-};
-
-type PizzaState = {
-  pizzas: Pizza[];
-};
+import menu from "..//Data/Menu.json"
+import { PizzaState, Pizza, PizzaContextProp } from "../Types/Types";
 
 const InitialPizzaState: PizzaState = {
     pizzas: []

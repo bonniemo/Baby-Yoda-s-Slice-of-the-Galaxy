@@ -1,6 +1,6 @@
 import { GlobalContext } from "../GlobalContextProvider";
 import { useContext } from "react";
-import menu from "../Menu.json";
+import menu from "../../Data/Menu.json";
 import "./Cart.scss";
 
 const Cart = () => {
