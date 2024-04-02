@@ -1,6 +1,6 @@
-import { GlobalContext } from "./GlobalContextProvider";
+import { GlobalContext } from "../GlobalContextProvider";
 import { useContext } from "react";
-import menu from "./Menu.json";
+import menu from "../Menu.json";
 import "./Cart.scss";
 
 const Cart = () => {
@@ -50,14 +50,14 @@ const Cart = () => {
   return (
     <>
       <section className="cart">
-        <h1>Cart</h1>        
+        <h1>Cart</h1>
         {state.pizzas.length === 0 ? (
           <p>No pizza yet</p>
         ) : (
           <>
             {state.pizzas.map((item, index) => (
               <section className="pizza-card" key={index}>
-                <h2>Pizza {(index + 1)}:</h2>
+                <h2>Pizza {index + 1}:</h2>
                 <section className="cart__bottom">
                   <button
                     onClick={() => handleSizeChange(item.id, item.bottom, true)}
@@ -83,7 +83,8 @@ const Cart = () => {
                   {item.toppings.map((topping, toppingIndex) => (
                     <li key={toppingIndex}>
                       {topping.name} - {topping.price} kr
-                      <button className="btn-remove"
+                      <button
+                        className="btn-remove"
                         onClick={() =>
                           handleToppingRemove(
                             item.id,

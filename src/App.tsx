@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./App.scss";
 import GlobalContextProvider from "./Components/GlobalContextProvider";
 import Hero from "./Components/Hero/Hero";
-import CreatePizza from "./Components/CreatePizza";
+import CreatePizza from "./Components/CreatePizza/CreatePizza";
 import Nav from "./Components/Nav/Nav";
 // import Location from "./Components/Location/Location";
 

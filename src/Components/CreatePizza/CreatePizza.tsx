@@ -4,11 +4,12 @@ import {
   GlobalContext,
   HandleToppingChange,
   Topping,
-} from "./GlobalContextProvider";
-import menu from "./Menu.json";
+} from "../GlobalContextProvider";
+import menu from "../Menu.json";
 import uuid from "react-uuid";
-import jabba from "../Images/jabba.png";
-import Cart from "./Cart";
+import jabba from "../../Images/jabba.png";
+import Cart from "../Cart/Cart";
+import "./CreatePizza.scss";
 
 const CreatePizza = ({ cartVisible }: CartVisibleType) => {
   const { dispatch } = useContext(GlobalContext);

@@ -23,8 +23,7 @@ const Nav: React.FC<SetCartVisibleTypes> = ({ setCartVisible, cartVisible }) => 
       </li>
       <li>
         <a href="#">Summon Pizza Support</a>
-      </li>
-      <section></section>
+      </li>      
       {state.pizzas.length === 0 ? (
         <li className="cart-icon">
           <a href="#" onClick={toggleCartVisibility}>
