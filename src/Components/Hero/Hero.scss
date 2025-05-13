@@ -1,51 +1,53 @@
 .hero {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  height: 85vh;
-  background-color: rgb(42, 41, 41);
-
-  .yoda-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     height: 85vh;
-    width: 45vw;
-    grid-row: 1/3;
-    grid-column: 1/2;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    background-color: rgb(42, 41, 41);
+    gap: 2rem;
 
-    img {
-      height: 100%;
-    }
-  }
+    .yoda-wrap {
+        height: 85vh;
 
-  .heading {
-    grid-row: 1/3;
-    grid-column: 2;
-    color: whitesmoke;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-right: 1rem;
-    gap: .5rem;
+        grid-row: 1/3;
+        grid-column: 1/2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
+        img {
+            height: 95%;
+            width: 90%;
+            border-radius: 50px;
+        }
     }
 
-    h2 {
-      font-size: 1.2rem;
-      font-weight: 400;
+    .heading {
+        grid-row: 1/3;
+        grid-column: 2;
+        color: whitesmoke;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1rem;
+        gap: 0.5rem;
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            font-weight: 400;
+        }
+
+        p {
+            line-height: 1.2;
+            font-size: 1rem;
+        }
     }
 
-    p {
-      max-width: 70%;
-      line-height: 1.2;
-      font-size: 1rem;
+    span {
+        display: block;
     }
-  }
-
-  span {
-    display: block;
-  }
 }
